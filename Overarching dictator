@@ -1,0 +1,4 @@
+This project will have users, permissions, and allow for full CRUD
+we will also explore viewsets, routers, and documentation
+For this project we'll be using a custom user model and supporting CURD
+operations from the beginning.
