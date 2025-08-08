@@ -4,7 +4,7 @@ from .models import CustomUser
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = CustomUser
-        fields= UserCreationForm.Meta.fields + ("name",)
+        fields= UserCreationForm.Meta.fields + ("name",)#添加的是tuple,所以需要,
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
