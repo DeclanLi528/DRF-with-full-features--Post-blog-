@@ -131,9 +131,16 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+
+# Four project-level permissions settings we can use.
+
+# AllowAny - any user, authenticated or not, has full access.
+# IsAuthenticated - only authenticated, registered users have access.
+# IsAdminUser - only admins/superusers have access.
+# IsAuthenticatedOrReadOnly - unauthorized users can view any page, but only authenticated users have write, edit, or delete priviledges
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES":[
-        "rest_framework.permissions.AllowAny",
+        "rest_framework.permissions.IsAuthenticated",
     ]
 }
 
